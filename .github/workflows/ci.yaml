@@ -31,8 +31,8 @@ jobs:
               uses: actions/setup-java@v1
               with:
                   java-version: ${{ matrix.java }}
-            - name: Build and test
-              run: ./gradlew.bat clean build dist
+            - name: Build
+              run: ./gradlew.bat clean dist
               if: startsWith(matrix.os, 'windows') == true
             - name: Build and test
               run: ./gradlew clean build dist
